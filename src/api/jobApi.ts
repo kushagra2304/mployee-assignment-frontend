@@ -12,7 +12,7 @@ export const fetchJobs = async ({
   page = 1,
   limit = 20,
 }: FetchJobsParams): Promise<{ jobs: Job[]; count: number }> => {
-  const res = await axios.get("http://localhost:5000/api/jobs", {
+  const res = await axios.get("https://mployee-assignment-backend.onrender.com/api/jobs", {
     params: {
       location,
       page,
@@ -24,7 +24,7 @@ export const fetchJobs = async ({
 };
 
 export const fetchJobById = async (id: string) => {
-  const res = await axios.get(`http://localhost:5000/api/jobs/${id}`);
+  const res = await axios.get(`https://mployee-assignment-backend.onrender.com/api/jobs/${id}`);
   return res.data;
 };
 
