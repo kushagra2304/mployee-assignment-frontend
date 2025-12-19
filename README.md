@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+ # Full Stack Job Listing Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my Full Stack Assignment, consisting of a frontend and backend application built with modern web technologies.
 
-Currently, two official plugins are available:
+## Live Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend: https://mployee-assignment-frontend.vercel.app
 
-## React Compiler
+Backend: https://mployee-assignment-backend.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Frontend repo: https://github.com/kushagra2304/mployee-assignment-frontend.git
 
-## Expanding the ESLint configuration
+Backend  repo: https://github.com/kushagra2304/mployee-assignment-backend.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Frontend: React, TypeScript, Axios, Tailwind CSS
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Backend: Node.js, Express
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Database: MongoDB (MongoDB Atlas)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Job listing with detailed job view
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Location-based job search
+
+Pagination for efficient handling of large data
+
+Optimized REST APIs
+
+Fully deployed frontend and backend
+
+## Architecture
+
+The frontend (React + TypeScript) communicates with the backend via REST APIs.
+The backend (Node.js + Express) uses MongoDB Atlas for cloud data storage, with pagination implemented for better performance and scalability.
+
+## Run Locally
+# Backend
+cd backend
+npm install
+npm run dev
+
+# Frontend
+cd frontend
+npm install
+npm run dev
+
+## NOTES : To run it locally a .env file is also required which contains MONGO_URI link.
